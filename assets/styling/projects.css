@@ -1,0 +1,212 @@
+/* /assets/styling/projects.css */
+
+/* Inherit variables if possible, or redefine for consistency */
+:root {
+    --projects-primary-color: #00568a;
+    /* Match resume blue */
+    --projects-card-bg: #ffffff;
+    /* White card background */
+    --projects-card-border: #e0e0e0;
+    --projects-text-color: #333;
+    --projects-subtle-text: #555;
+    --projects-link-color: var(--projects-primary-color);
+    --projects-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#projects-page {
+    max-width: 950px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: var(--projects-font);
+    color: var(--projects-text-color);
+}
+
+#projects-page h1 {
+    text-align: center;
+    font-size: 2.2em;
+    color: var(--projects-card-bg);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--projects-card-border);
+}
+
+/* Header SVG styling (if you use it) */
+.projects-header-svg {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    /* Adjust as needed */
+    margin: 0 auto 30px auto;
+    /* Center it */
+    height: auto;
+}
+
+
+.projects-list {
+    display: grid;
+    /* Creates 1 column by default, then 2 columns on larger screens */
+    grid-template-columns: 1fr;
+    gap: 25px;
+    /* Space between cards */
+}
+
+/* Make it 2 columns on medium screens and up */
+@media (min-width: 768px) {
+    .projects-list {
+        /* Uncomment if you want 2 columns */
+        /* grid-template-columns: repeat(2, 1fr); */
+    }
+}
+
+/* Make it 1 column again on very large screens if desired */
+@media (min-width: 1200px) {
+    .projects-list {
+        /* Keep it 1 column for detailed view */
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.project-card {
+    background-color: var(--projects-card-bg);
+    border: 1px solid var(--projects-card-border);
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    /* Stack image above text on small screens */
+    overflow: hidden;
+    /* Contain box shadow and border radius */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout image and text side-by-side on larger screens */
+@media (min-width: 640px) {
+
+    /* sm breakpoint or similar */
+    .project-card {
+        flex-direction: row;
+    }
+}
+
+.project-image-container {
+    flex-shrink: 0;
+    /* Prevent image container from shrinking */
+    width: 100%;
+    /* Full width on small screens */
+    max-height: 250px;
+    /* Limit height */
+    overflow: hidden;
+    background-color: #f0f0f0;
+    /* Placeholder background */
+}
+
+.project-image-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cover the area, might crop */
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image-container img {
+    transform: scale(1.03);
+    /* Slight zoom on hover */
+}
+
+
+/* Adjust image container width on larger screens */
+@media (min-width: 640px) {
+    .project-image-container {
+        width: 35%;
+        /* Adjust width as needed */
+        max-height: none;
+        /* Remove height limit */
+        border-right: 1px solid var(--projects-card-border);
+    }
+}
+
+
+.project-details {
+    padding: 15px 20px;
+    flex-grow: 1;
+    /* Take remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-details h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--projects-text-color);
+    /* Darker title */
+    margin: 0 0 10px 0;
+}
+
+.project-details h3 a {
+    color: inherit;
+    /* Inherit color from h3 */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.project-details h3 a:hover {
+    color: var(--projects-link-color);
+    text-decoration: underline;
+}
+
+
+.project-points {
+    list-style: disc;
+    margin: 0 0 0 18px;
+    /* Indent bullets */
+    padding: 0;
+    font-size: 0.9em;
+    color: var(--projects-subtle-text);
+    line-height: 1.6;
+    flex-grow: 1;
+    /* Push repo link down if present */
+}
+
+.project-points li {
+    margin-bottom: 6px;
+}
+
+/* Allow links within list items */
+.project-points li a {
+    color: var(--projects-link-color);
+    text-decoration: none;
+}
+
+.project-points li a:hover {
+    text-decoration: underline;
+}
+
+.project-repo-link {
+    margin-top: 15px;
+    /* Space above the link */
+    text-align: right;
+}
+
+.project-repo-link a {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: var(--projects-link-color);
+    text-decoration: none;
+    padding: 4px 8px;
+    border: 1px solid var(--projects-link-color);
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.project-repo-link a:hover {
+    background-color: var(--projects-link-color);
+    color: white;
+    text-decoration: none;
+}

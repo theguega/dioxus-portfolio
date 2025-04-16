@@ -1,0 +1,237 @@
+/* /assets/styling/resume_en.css */
+
+:root {
+    --resume-en-primary-color: #00568a;
+    /* #00568a from LaTeX example */
+    --resume-en-gray-text: #555;
+    --resume-en-light-gray: #ccc;
+    --resume-en-bg-color: #ffffff;
+    /* White background */
+    --resume-en-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#resume-en-page-single-col {
+    max-width: 850px;
+    /* Standard document width */
+    margin: 20px auto;
+    padding: 30px 40px;
+    /* More padding */
+    background-color: var(--resume-en-bg-color);
+    color: #333;
+    font-family: var(--resume-en-font);
+    line-height: 1.5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    border-radius: 4px;
+}
+
+/* --- Header --- */
+.resume-en-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--resume-en-light-gray);
+}
+
+.resume-en-header h1 {
+    font-size: 2.6em;
+    /* Huge */
+    font-weight: bold;
+    color: var(--resume-en-primary-color);
+    margin: 0 0 3px 0;
+    letter-spacing: 0.5px;
+}
+
+.resume-en-header h2 {
+    /* Tagline */
+    font-size: 1.3em;
+    font-weight: normal;
+    /* Not bold in LaTeX example */
+    color: var(--resume-en-gray-text);
+    margin: 0 0 10px 0;
+}
+
+.contact-block-en {
+    font-size: 0.9em;
+    color: var(--resume-en-gray-text);
+    word-spacing: 1px;
+    /* Adjust spacing between items */
+}
+
+.contact-item-en {
+    display: inline-block;
+    /* Keep items on one line */
+    margin: 0 2px;
+    /* Minimal horizontal space */
+    white-space: nowrap;
+    /* Prevent wrapping within an item */
+}
+
+.contact-item-en .icon {
+    color: var(--resume-en-primary-color);
+    margin-right: 3px;
+    /* Space between icon and text */
+    /* Add width/text-align if using icon fonts for alignment */
+}
+
+.contact-item-en a {
+    color: var(--resume-en-primary-color);
+    text-decoration: none;
+}
+
+.contact-item-en a:hover {
+    text-decoration: underline;
+}
+
+.contact-sep-en {
+    color: #aaa;
+    /* Lighter gray separator */
+    margin: 0 8px;
+    /* Space around separator */
+    font-size: 0.9em;
+    display: inline-block;
+    transform: translateY(-1px);
+    /* Align separator slightly */
+}
+
+/* --- Summary --- */
+.resume-en-summary {
+    font-size: 0.95em;
+    margin-bottom: 20px;
+    text-align: justify;
+    /* Justify summary text */
+}
+
+/* --- Section Title --- */
+.section-title-en {
+    font-size: 1.4em;
+    /* Large */
+    font-weight: bold;
+    color: var(--resume-en-primary-color);
+    margin: 0 0 10px 0;
+    padding-bottom: 3px;
+    border-bottom: 0.4pt solid var(--resume-en-primary-color);
+    /* Match LaTeX hrule */
+}
+
+/* --- Section Content --- */
+.section-en {
+    margin-bottom: 15px;
+    /* Space between sections */
+}
+
+.entry-en {
+    margin-bottom: 12px;
+    /* Space between entries (like Experience items) */
+}
+
+.entry-header-en {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    /* Align title and date */
+    margin-bottom: 2px;
+    /* Less space before subtitle */
+}
+
+.entry-title-en {
+    font-size: 1.05em;
+    font-weight: bold;
+    color: #222;
+    /* Darker than regular text */
+}
+
+.entry-date-en {
+    font-size: 0.9em;
+    font-style: italic;
+    color: var(--resume-en-gray-text);
+    white-space: nowrap;
+    /* Keep date together */
+    flex-shrink: 0;
+    /* Prevent shrinking */
+    margin-left: 15px;
+    /* Ensure space from title */
+}
+
+.entry-subtitle-en {
+    font-size: 0.95em;
+    font-style: italic;
+    color: var(--resume-en-gray-text);
+    margin-bottom: 5px;
+}
+
+.entry-points-en {
+    list-style: disc;
+    margin: 0 0 0 18px;
+    /* Indent bullets */
+    padding: 0;
+}
+
+.entry-points-en li {
+    font-size: 0.9em;
+    margin-bottom: 3px;
+    /* Tighter item spacing */
+    line-height: 1.4;
+}
+
+/* --- Skills Section --- */
+.skills-section-en {
+    margin-top: 20px;
+    /* More space before skills */
+}
+
+.skill-listing-en {
+    font-size: 0.9em;
+    margin-bottom: 4px;
+    /* Space between skill lines */
+    line-height: 1.4;
+}
+
+.skill-listing-en strong {
+    color: #111;
+    /* Very dark gray or black for category */
+    margin-right: 5px;
+    /* Space after category name */
+}
+
+/* --- Responsive (minimal needed for single column) --- */
+@media (max-width: 600px) {
+    #resume-en-page-single-col {
+        padding: 20px 15px;
+    }
+
+    .resume-en-header h1 {
+        font-size: 2em;
+    }
+
+    .resume-en-header h2 {
+        font-size: 1.1em;
+    }
+
+    .contact-block-en {
+        font-size: 0.85em;
+        line-height: 1.6;
+        /* Allow wrapping more cleanly */
+    }
+
+    .contact-item-en {
+        margin-bottom: 5px;
+        /* Space if items wrap */
+    }
+
+    .entry-header-en {
+        flex-direction: column;
+        /* Stack title and date */
+        align-items: flex-start;
+    }
+
+    .entry-date-en {
+        margin-left: 0;
+        margin-top: 2px;
+        font-size: 0.85em;
+    }
+
+    .section-title-en {
+        font-size: 1.3em;
+    }
+}

@@ -1,0 +1,364 @@
+/* /assets/styling/resume_fr.css */
+
+/* --- Variables (optional, but helpful) --- */
+:root {
+    --resume-primary-color: #00568a;
+    /* Adjusted blue from LaTeX */
+    --resume-gray-text: #505050;
+    --resume-light-gray-bg: #f8f9fa;
+    /* Light background for the resume box */
+    --resume-border-color: #dee2e6;
+    --timeline-line-color: #cde5f3;
+    /* Lighter blue for timeline */
+    --timeline-dot-bg: var(--resume-primary-color);
+    --timeline-dot-border: white;
+}
+
+/* --- Base Container --- */
+#resume-fr-page {
+    padding: 20px;
+    max-width: 1000px;
+    /* Limit width for better readability */
+    margin: 20px auto;
+    /* Center the resume page */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Match body font or choose specific */
+    color: #333;
+    /* Default text color for resume content */
+    background-color: var(--resume-light-gray-bg);
+    /* Light background */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Header Section --- */
+.resume-header {
+    display: flex;
+    align-items: flex-start;
+    /* Align items to the top */
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--resume-border-color);
+    flex-wrap: wrap;
+    /* Allow wrapping on small screens */
+}
+
+.resume-photo {
+    width: 120px;
+    /* Adjust size */
+    height: 150px;
+    /* Adjust size */
+    margin-right: 30px;
+    margin-bottom: 15px;
+    /* Add margin for wrap scenario */
+    flex-shrink: 0;
+    /* Prevent shrinking */
+    background-color: #e0e0e0;
+    /* Placeholder bg */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    /* For placeholder text */
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: var(--resume-gray-text);
+}
+
+.resume-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.resume-info {
+    flex-grow: 1;
+    /* Take remaining space */
+}
+
+.resume-info h1 {
+    font-size: 2.5em;
+    /* Large name */
+    font-weight: bold;
+    color: var(--resume-primary-color);
+    margin: 0 0 5px 0;
+}
+
+.resume-info h2 {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--resume-gray-text);
+    margin: 0 0 5px 0;
+}
+
+.resume-info p {
+    font-size: 1.1em;
+    color: var(--resume-gray-text);
+    margin: 0 0 10px 0;
+}
+
+.resume-info p.objective {
+    /* Specific class for the objective */
+    font-weight: 500;
+}
+
+/* --- Main Body (Two Columns) --- */
+.resume-body {
+    display: flex;
+    gap: 4%;
+    /* Space between columns */
+    flex-wrap: wrap;
+    /* Allow columns to stack on smaller screens */
+}
+
+.resume-left-col {
+    width: 100%;
+    /* Full width on small screens */
+    margin-bottom: 20px;
+    /* Space when stacked */
+}
+
+.resume-right-col {
+    width: 100%;
+    /* Full width on small screens */
+}
+
+/* Apply column widths on larger screens */
+@media (min-width: 768px) {
+    .resume-left-col {
+        width: 30%;
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+
+    .resume-right-col {
+        width: 66%;
+    }
+}
+
+/* --- Left Column Styling --- */
+.left-col-section {
+    margin-bottom: 25px;
+}
+
+.left-col-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--resume-primary-color);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--resume-primary-color);
+    /* Simple underline */
+    display: inline-block;
+    /* Make border fit content */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 0.9em;
+}
+
+.contact-item .icon {
+    /* Style for the icon placeholder/element */
+    width: 16px;
+    /* Fixed width for alignment */
+    margin-right: 8px;
+    text-align: center;
+    color: var(--resume-primary-color);
+    /* Add specific icon styles here if using icon fonts/SVGs */
+}
+
+.contact-item a {
+    color: var(--resume-primary-color);
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.left-col-section p,
+.left-col-section .skill-category {
+    font-size: 0.9em;
+    color: var(--resume-gray-text);
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.skill-category strong {
+    color: #333;
+    /* Make category title slightly darker */
+}
+
+.left-col-section ul {
+    /* For lists like activities */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.left-col-section li {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: var(--resume-gray-text);
+}
+
+
+/* --- Right Column Styling --- */
+.right-col-section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--resume-primary-color);
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--resume-primary-color);
+}
+
+/* --- Timeline Styling --- */
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    /* Needed for the ::before pseudo-element */
+    padding-left: 20px;
+    /* Space for the line and dots */
+}
+
+/* The vertical timeline bar */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    /* Position relative to padding-left */
+    top: 5px;
+    /* Start slightly below the top */
+    bottom: 5px;
+    /* End slightly above the bottom */
+    width: 3px;
+    background-color: var(--timeline-line-color);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    /* Needed for positioning the dot */
+    margin-bottom: 25px;
+    /* Space between items */
+    padding-left: 15px;
+    /* Space content away from the dot */
+}
+
+/* The timeline dot */
+.timeline-marker {
+    position: absolute;
+    left: -6px;
+    /* (DotWidth/2 + LineWidth/2) related to timeline padding */
+    top: 4px;
+    /* Align vertically with text */
+    width: 15px;
+    height: 15px;
+    background-color: var(--timeline-dot-bg);
+    border: 3px solid var(--timeline-dot-border);
+    border-radius: 50%;
+    z-index: 1;
+    /* Ensure dot is above the line */
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    /* Align title and date nicely */
+    flex-wrap: wrap;
+    /* Allow date to wrap on small screens */
+    margin-bottom: 3px;
+}
+
+.timeline-title {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: var(--resume-primary-color);
+    margin: 0 10px 0 0;
+    /* Space between title and date */
+}
+
+.timeline-date {
+    font-size: 0.85em;
+    font-style: italic;
+    color: var(--resume-gray-text);
+    white-space: nowrap;
+    /* Prevent date from breaking line */
+}
+
+.timeline-subtitle {
+    font-size: 0.95em;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--resume-gray-text);
+    margin-bottom: 8px;
+}
+
+.timeline-points {
+    list-style: disc;
+    margin: 0 0 0 18px;
+    /* Indent bullet points */
+    padding: 0;
+}
+
+.timeline-points li {
+    font-size: 0.9em;
+    color: #444;
+    /* Slightly darker than gray text */
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 767px) {
+    .resume-header {
+        text-align: center;
+        /* Center header text on small screens */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resume-photo {
+        margin-right: 0;
+        /* No right margin when stacked */
+    }
+
+    .resume-info h1 {
+        font-size: 2em;
+    }
+
+    .resume-info h2 {
+        font-size: 1.2em;
+    }
+
+    .resume-info p {
+        font-size: 1em;
+    }
+
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-date {
+        margin-top: 3px;
+        font-size: 0.8em;
+    }
+
+    .timeline-title {
+        font-size: 1.1em;
+    }
+}

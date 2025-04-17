@@ -1,6 +1,8 @@
 [application]
+out_dir = "docs"
 
 [web.app]
+base_path = "dioxus-portfolio"
 
 # HTML title tag content
 title = "dioxus-portfolio"

@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 
-use views::{Navbar, PageNotFound, Projects, ResumeEn, ResumeFr};
+use views::{Navbar, Projects, ResumeEn, ResumeFr};
 
 mod components;
 mod views;
@@ -15,12 +15,6 @@ enum Route {
         ResumeEn {},
         #[route("/resume-fr")]
         ResumeFr {},
-    #[end_layout]
-
-    #[route("/:..route")]
-    PageNotFound {
-        route: Vec<String>,
-    },
 }
 
 const FAVICON: Asset = asset!("/assets/favicon.ico");

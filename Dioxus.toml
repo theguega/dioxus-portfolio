@@ -4,20 +4,14 @@ out_dir = "docs"
 [web.app]
 base_path = "dioxus-portfolio"
 
-# HTML title tag content
-title = "dioxus-portfolio"
+title = "Theo Guegan"
 
-# include `assets` in web platform
 [web.resource]
 
-# Additional CSS style files
 style = []
 
-# Additional JavaScript files
 script = []
 
 [web.resource.dev]
 
-# Javascript code file
-# serve: [dev-server] only
 script = []

@@ -1,14 +1,15 @@
-# Development
+# Dioxus Portfolio
 
-### Serving Your App
+This is a portfolio website built with Dioxus.
 
-Run the following command in the root of your project to start developing with the default platform:
+## Deploying :
 
 ```bash
-dx serve
+dx bundle
 ```
 
-To run for a different platform, use the `--platform platform` flag. E.g.
-```bash
-dx serve --platform desktop
-```
+The bundle will be available in the `docs` folder and will be deployed to Github Pages automatically after pushing to the `main` branch.
+
+## Accessing the site :
+
+The site is available at [https://theguega.github.io/dioxus-portfolio/](https://theguega.github.io/dioxus-portfolio/).

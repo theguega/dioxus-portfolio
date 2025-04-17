@@ -20,11 +20,6 @@ pub fn ResumeEn() -> Element {
                         span { class: "icon", "✉️" }
                         a { href: "mailto:theo.guegan.perso@gmail.com", "theo.guegan.perso@gmail.com" }
                     }
-                    span { class: "contact-sep-en", "|" }
-                    span { class: "contact-item-en",
-                        span { class: "icon", "📞" }
-                        "(+33) 782954555"
-                    }
                     br {}
                     span { class: "contact-item-en",
                         span { class: "icon", "🔗" }

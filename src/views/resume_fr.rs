@@ -3,7 +3,6 @@ use dioxus::prelude::*;
 use crate::components::{ContactItem, SkillCategory, TimelineItem};
 
 const RESUME_CSS: Asset = asset!("/assets/styling/resume_fr.css");
-const PHOTO: Asset = asset!("/assets/images/photo_theo.jpg");
 
 #[component]
 pub fn ResumeFr() -> Element {
@@ -14,9 +13,6 @@ pub fn ResumeFr() -> Element {
 
             // --- HEADER ---
             div { class: "resume-header",
-                div { class: "resume-photo",
-                    img { src: PHOTO }
-                }
                 div { class: "resume-info",
                     h1 { "Theo Guegan" }
                     h2 { "Étudiant Ingénieur en Génie Informatique" }
@@ -35,7 +31,6 @@ pub fn ResumeFr() -> Element {
                     // -- Coordonnées --
                     section { class: "left-col-section",
                         h3 { class: "left-col-title", "Coordonnées" }
-                        ContactItem { icon: "📞", text: "07 82 95 45 55" }
                         ContactItem {
                             icon: "✉️",
                             text: "theo.guegan.perso@gmail.com",

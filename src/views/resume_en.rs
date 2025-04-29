@@ -45,7 +45,7 @@ pub fn ResumeEn() -> Element {
 
             // --- SUMMARY ---
             p { class: "resume-en-summary",
-                "Top-performing Computer Engineering student with a 4.0 GPA, specializing in Embedded Computing and Autonomous Systems at Université de Technologie de Compiègne (France). Seeking a challenging 6-month robotics internship to apply strong skills in C++, Rust, and Python for embedded software, control systems, and robotics in innovative projects within a leading technology company."
+                "Computer Engineering student, specializing in Embedded Computing and Autonomous Systems at Université de Technologie de Compiègne (France). Seeking a challenging 6-month robotics internship to apply strong skills in C++, Rust, and Python for embedded software, control systems, and robotics in innovative projects within a leading technology company."
             }
 
             // --- EXPERIENCE SECTION ---

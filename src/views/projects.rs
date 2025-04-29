@@ -12,7 +12,7 @@ const AUTONOMOUS_VEHICLE_IMG_URL: &str = "https://github.com/theguega/Autonomous
 const AI_GO_IMG_URL: &str =
     "https://github.com/theguega/AI-for-Go-like-game/blob/main/doc/dodo.jpg?raw=true";
 const LOCAL_LLM_IMG_URL: &str =
-    "https://github.com/theguega/Local-LLM-WebServer/blob/main/frontend/public/favico.png";
+    "https://github.com/theguega/Local-LLM-WebServer/blob/main/frontend/public/favico.png?raw=true";
 const LEROBOT_IMG_URL: &str =
     "https://github.com/huggingface/lerobot/blob/main/media/so100/leader_follower.webp?raw=true";
 
@@ -45,17 +45,13 @@ pub fn Projects() -> Element {
                     ),
                     description_points: vec![
                         project_li(
-                            "Developed an embedded Lua script engine (C++, test-driven development).",
+                            "Developed a real-time embedded Lua scripting engine in C++ (TDD), enabling complex, on-drone mission logic customization for autonomous tasks.",
                         ),
                         project_li(
-                            "Built a cross-platform application for drone swarm management (Flutter).",
+                            "Built a cross-platform Flutter application for drone swarm management, enhancing multi-device coordination, and presented capabilities to the French Ministry of Defence.",
                         ),
                         project_li(
-                            "Integrated a LLM for drone control (Rust, Docker, macOS sys-admin).",
-                        ),
-                        project_li("Configured drone networking and services (Systemd, Ansible, Bash)."),
-                        project_li(
-                            "Designed and implemented multi-level drone operations (standalone, simulation, outdoor demos).",
+                            "Integrated a local LLM using Rust and Docker for natural-language drone commands, contributing to a groundbreaking autonomous drone swarm project showcased to media.",
                         ),
                         project_li(
                             "Learn more: [Thales demonstrates its capacity to deploy drone swarms](https://www.thalesgroup.com/en/worldwide/defence-and-security/press_release/thales-demonstrates-its-capacity-deploy-drone-swarms)",

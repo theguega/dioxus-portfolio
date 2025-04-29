@@ -60,15 +60,15 @@ pub fn ResumeFr() -> Element {
                         h3 { class: "left-col-title", "Compétences" }
                         SkillCategory {
                             title: "Langages",
-                            skills: "C++, Rust, Python, C, Bash, Lua",
+                            skills: "C/C++, Rust, Python, Lua, Java, Bash, Gleam, Assembly, VHDL",
                         }
                         SkillCategory {
                             title: "Outils",
-                            skills: "Linux, Git, Docker, CMake, ROS, TDD, Flutter",
+                            skills: "Linux, Git, Docker, CMake, Makefile",
                         }
                         SkillCategory {
                             title: "Robotique & Autonomie",
-                            skills: "Contrôle (PID), Nav. Autonome, Planif. Trajectoire, Fusion Capteurs (Base), Prise de Décision, Coord. Essaims, Systèmes Embarqués, RL (Base).",
+                            skills: "Contrôle, Nav. Autonome, Planif. Trajectoire, Fusion Capteurs, Prise de Décision, Coord. Essaims, Systèmes Embarqués, RL, ROS, Cross Compilation.",
                         }
                         SkillCategory {
                             title: "Soft-Skills",

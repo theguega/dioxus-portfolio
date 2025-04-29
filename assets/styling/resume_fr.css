@@ -74,6 +74,7 @@
 
 .resume-info {
     flex-grow: 1;
+    text-align: center;
     /* Take remaining space */
 }
 

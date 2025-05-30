@@ -145,19 +145,57 @@ pub fn ResumeEn() -> Element {
                         span { class: "entry-title-en",
                             "Leader - Decision Making & Control for Autonomous Vehicle Fleet"
                         }
-                        span { class: "entry-date-en", "February 2024 – June 2024" }
+                        span { class: "entry-date-en", "2024 – 2025" }
                     }
-                    p { class: "entry-subtitle-en", "UTAC Challenge | Winner - Best School Award" } // Added award to subtitle
+                    p { class: "entry-subtitle-en",
+                        "UTAC Challenge | 2024 - 1st: Best School Award | 2025 - 1st: Free Category"
+                    }
                     ul { class: "entry-points-en",
                         li {
                             "Led team development of a robust autonomous navigation stack, achieving 1st place in the UTAC European Competition."
                         }
                         li {
-                            "Designed and implemented key autonomy features: target-based navigation, adaptive cruise control (ACC), and static obstacle avoidance."
+                            "Designed and implemented key features: target-based navigation, adaptive cruise control (ACC), and static obstacle avoidance in MATLAB."
+                        }
+                    }
+                }
+
+                article { class: "entry-en",
+                    div { class: "entry-header-en",
+                        span { class: "entry-title-en", "Coding Competition" }
+                        span { class: "entry-date-en", "2025" }
+                    }
+                    p { class: "entry-subtitle-en", "FIT Coding Challenge | Bosnia-Herzegovina" }
+                    ul { class: "entry-points-en",
+                        li { "Solved complex LeetCode style problems in C++ under time constraints." }
+                    }
+                }
+
+                article { class: "entry-en",
+                    div { class: "entry-header-en",
+                        span { class: "entry-title-en", "Distributed Payment App" }
+                    }
+                    p { class: "entry-subtitle-en", "Personal Project" }
+                    ul { class: "entry-points-en",
+                        li {
+                            "Developed a peer-to-peer payment application replicating our school's app using a distributed systems approach in Rust, with a full-stack, cross-platform interface built with Dioxus."
+                        }
+                    }
+                }
+
+                article { class: "entry-en",
+                    div { class: "entry-header-en",
+                        span { class: "entry-title-en", "Real-Time Kernel" }
+                    }
+                    p { class: "entry-subtitle-en", "Personal Project" }
+                    ul { class: "entry-points-en",
+                        li {
+                            "Implemented a bare-metal real-time kernel in C for the STM32H747I-DISCO board, featuring mutexes and semaphores to manage basic tasks."
                         }
                     }
                 }
             }
+
 
             // --- SKILLS SECTION ---
             section { class: "skills-section-en",

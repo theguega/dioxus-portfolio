@@ -45,7 +45,7 @@ pub fn ResumeEn() -> Element {
 
             // --- SUMMARY ---
             p { class: "resume-en-summary",
-                "Computer Engineering student, specializing in Embedded Computing and Autonomous Systems at Université de Technologie de Compiègne (France). Seeking a challenging 6-month robotics internship to apply strong skills in C++, Rust, and Python for embedded software, control systems, and robotics in innovative projects within a leading technology company."
+                "Engineering student in Computer Science with a 4.0 GPA, specializing in Embedded Computing and Autonomous Systems at University of Waterloo (Canada). Seeking a challenging 6-month robotics internship to apply strong skills in C++, Rust, and Python for embedded software, control systems, and robotics in innovative projects within a leading technology company."
             }
 
             // --- EXPERIENCE SECTION ---
@@ -98,7 +98,7 @@ pub fn ResumeEn() -> Element {
 
                 article { class: "entry-en",
                     div { class: "entry-header-en",
-                        span { class: "entry-title-en", "Master of Science - Computer Engineering" }
+                        span { class: "entry-title-en", "Master’s Degree in Computer Scienc" }
                         span { class: "entry-date-en", "Expected in 2026" }
                     }
                     p { class: "entry-subtitle-en",
@@ -128,14 +128,15 @@ pub fn ResumeEn() -> Element {
 
                 article { class: "entry-en",
                     div { class: "entry-header-en",
-                        span { class: "entry-title-en", "LeRobot - Teleoperated Robotic Arm Project" }
+                        span { class: "entry-title-en", "LeRobot – Teleoperated Robotic Arm" }
                     }
                     p { class: "entry-subtitle-en",
                         "Personal Project | Replicated Hugging Face LeRobot"
                     }
                     ul { class: "entry-points-en",
                         li {
-                            "Gained practical experience implementing low-cost, real-world robotics control systems and exploring reinforcement learning (RL) policies for teleoperation tasks using Python."
+                            "Built a low-cost robotic system and explored reinforcement learning (Python) for teleoperation and Imitation
+                            Learning."
                         }
                     }
                 }
@@ -191,6 +192,19 @@ pub fn ResumeEn() -> Element {
                     ul { class: "entry-points-en",
                         li {
                             "Implemented a bare-metal real-time kernel in C for the STM32H747I-DISCO board, featuring mutexes and semaphores to manage basic tasks."
+                        }
+                    }
+                }
+
+                article { class: "entry-en",
+                    div { class: "entry-header-en",
+                        span { class: "entry-title-en", "Hackathon: Aide-un-Etu – Responsible Digital Platform" }
+                    }
+                    p { class: "entry-subtitle-en", "Prix Fondation/mc2i – Winner" }
+                    ul { class: "entry-points-en",
+                        li {
+                            "Developed an eco-friendly and accessible student support platform in a 48h hackathon at the Centre d’Innovation
+                            de l’UTC."
                         }
                     }
                 }

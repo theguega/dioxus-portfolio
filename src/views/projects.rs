@@ -15,6 +15,9 @@ const LOCAL_LLM_IMG_URL: &str =
     "https://github.com/theguega/Local-LLM-WebServer/blob/main/frontend/public/favico.png?raw=true";
 const LEROBOT_IMG_URL: &str =
     "https://github.com/huggingface/lerobot/blob/main/media/so100/leader_follower.webp?raw=true";
+const AIDE_UN_ETU_IMG_URL: &str = "https://media.licdn.com/dms/image/v2/D5622AQHXDhWEzry9GA/feedshare-shrink_2048_1536/B56Zf1zxDBGoAs-/0/1752175698174?e=1756944000&v=beta&t=q5OqUGIeKyPuAKox-vDEJpvg5VQ-2ETYAW1i8sBEl00";
+const PEILLUTE_IMG_URL: &str =
+    "https://github.com/theguega/peillute/raw/main/assets/doc/peillute_pay_page.jpeg";
 
 #[component]
 pub fn Projects() -> Element {
@@ -136,7 +139,35 @@ pub fn Projects() -> Element {
                     ],
                     repo_link: Some("https://huggingface.co/lerobot".to_string()),
                 }
+
+                // Project 7: AideUnEtu
+                ProjectCard {
+                    title: "Aide-Un-Etu".to_string(),
+                    image_url: AIDE_UN_ETU_IMG_URL.to_string(),
+                    image_alt: "Aide-Un-Etu Hackaton Photo".to_string(),
+                    description_points: vec![
+                        project_li(
+                            "Developed during a 48-hour hackathon on numérique responsable at the Centre d’Innovation de l’UTC, Aide-un-Etu is a platform designed to promote student solidarity through eco-conscious and accessible digital design.",
+                        ),
+                        project_li("🏆 Winner of the Prix Fondation/mc2i"),
+                        project_li("Built in collaboration with Mathis Delmaere, the project was recognized for its social impact, sustainability focus, and inclusive UX."),
+                    ],
+                    repo_link: Some("https://github.com/theguega/aide-un-etu".to_string()),
+                }
             }
+
+            // Project 8: Peillute
+            ProjectCard {
+              title: "Peillute".to_string(),
+              image_url: PEILLUTE_IMG_URL.to_string(),
+              image_alt: "Peillute Pay Page".to_string(),
+                description_points: vec![
+                    project_li(
+                      "Peillute is a peer-to-peer payment application replicating our school's app using a distributed systems approach in Rust, with a full-stack, cross-platform interface built with Dioxus."
+                    )
+                ],
+                repo_link: Some("https://github.com/theguega/peillute".to_string()),
+                }
         }
     }
 }
